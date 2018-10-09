@@ -1,6 +1,6 @@
 package com.stone.demo.web;
 
-import com.stone.demo.quartz.SampleJob;
+//import com.stone.demo.quartz.SampleJob;
 
 import org.quartz.CronScheduleBuilder;
 import org.quartz.JobBuilder;
@@ -29,17 +29,17 @@ public class DemoApplication {
     System.out.println(" springApplication run !");
     SpringApplication.run(DemoApplication.class, args);
   }
-
-  @Bean
-  public JobDetail sampleJobDetail() {
-    return JobBuilder.newJob(SampleJob.class).withIdentity("sampleJob")
-        .usingJobData("name", "world").storeDurably().requestRecovery().build();
-  }
-
-  @Bean
-  public Trigger sampleJobTrigger() {
-    CronScheduleBuilder scheduleBuilder = CronScheduleBuilder.cronSchedule("0/2 * * * * ?");
-    return TriggerBuilder.newTrigger().forJob(sampleJobDetail()).withIdentity("samleTrigger")
-        .withSchedule(scheduleBuilder).build();
-  }
+//
+//  @Bean
+//  public JobDetail sampleJobDetail() {
+//    return JobBuilder.newJob(SampleJob.class).withIdentity("sampleJob")
+//        .usingJobData("name", "world").storeDurably().requestRecovery().build();
+//  }
+//
+//  @Bean
+//  public Trigger sampleJobTrigger() {
+//    CronScheduleBuilder scheduleBuilder = CronScheduleBuilder.cronSchedule("0/2 * * * * ?");
+//    return TriggerBuilder.newTrigger().forJob(sampleJobDetail()).withIdentity("samleTrigger")
+//        .withSchedule(scheduleBuilder).build();
+//  }
 }

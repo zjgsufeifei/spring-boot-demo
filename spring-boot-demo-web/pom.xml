@@ -20,7 +20,6 @@
         <dependency>
             <groupId>com.stone.demo</groupId>
             <artifactId>spring-boot-demo-core</artifactId>
-            <version>1.0-SNAPSHOT</version>
         </dependency>
 
         <!-- 添加对jsp视图解析的支持 -->

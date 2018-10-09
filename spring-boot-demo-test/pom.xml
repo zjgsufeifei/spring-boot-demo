@@ -16,6 +16,8 @@
             <groupId>com.stone.demo</groupId>
             <artifactId>spring-boot-demo-starter-hello</artifactId>
             <version>1.1-SNAPSHOT</version>
+            <scope>system</scope>
+            <systemPath>${basedir}/src/main/resources/spring-boot-demo-starter-hello-1.1-SNAPSHOT.jar</systemPath>
         </dependency>
     </dependencies>
 </project>
